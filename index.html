@@ -29,6 +29,7 @@
 
         // Some and Every Checks
         // Array.prototype.some() // is at least one person 19 or older?
+        // .some will check if at least 1
         
         // option 1
         // const isAdult = people.some(function(person) {
@@ -49,7 +50,13 @@
 
         console.log(isAdult);
         console.log({isAdult}); // can put curlies around the variable and it will show the name and value fo the var
+        
         // Array.prototype.every() // is everyone 19 or older?
+        // .every will check if all meet the specifications
+
+        const allAdults = people.every(person => ((new Date()).getFullYear()) - person.year >= 19);
+
+        console.log(allAdults);
 
         // Array.prototype.find()
         // Find is like filter, but instead returns just the one you are looking for
